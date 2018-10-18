@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Omkrets och Arie</title>
+</head>
+<body>
+    <script>
+
+        // En prompt där användarens input lagrasi variabeln radie.
+        let radie = prompt('Vad har cirkeln för radie?');
+
+        // Funktionerna area och omkrets hämtar sedan radie för att göra två olika uträkningar 
+        function area(){
+            let svar = Math.pow(radie, 2)*Math.PI;
+            return svar.toFixed(2);
+        }
+
+        function omkrets(){
+            let svar = (radie*2)*Math.PI;
+            return svar.toFixed(2);
+        }
+        
+        // Funktionernas uträkningar presenteras sedan genom funktionen alert.
+        document.write(alert('Cirkelns area är: ' + area() + ' cm2, och omkretsen är: ' + omkrets() + ' cm!'));
+        </script>
+</body>
+</html>
