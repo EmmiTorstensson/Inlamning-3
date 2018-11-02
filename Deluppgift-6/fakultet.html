@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fakultet</title>
+</head>
+<body>
+    <h1 id='svar'>
+
+    <script>
+
+       let svar = document.getElementById('svar');
+            
+            // While loop som gör att användaren får en ny chans om dess input är fel.
+            while(true){
+
+            // Prompt som läser in användarens input och omvandlar den till typen Number.
+            let input = +prompt('Skriv ett tal mellan 1-1000:');
+
+            // Sats för att kontrollerar att avändaren gett rätt typ av input, med passande felmeddelande.
+            if(input === null || input === '' || isNaN(input) || input < 1 || input > 1000){
+                alert('OBS! Du måste skriva in ett tal mellan 1-1000');
+                continue;
+            }
+            
+            // Vid rätt typ av input körs följande kodblock.
+            else{
+
+                // Variabel för att stödja formel och spara resutlat. 
+                let x = 1;
+                let summa = 1;
+                
+                // kod som ökar varibel x till den är lika med användarens input
+                // och summa till slutresultatet.
+                while(x < input){
+                    summa = summa * (x+1)
+                    x++;
+                }
+                
+                // If-sats som kontrollerar ifall användarens input ger ett räknebart resultat.
+                if(summa === Infinity){
+                    alert('OBS! Valt tal är för högt för att räkna ut!');
+                    continue;
+                }
+                else{
+            
+                // Sträng som presenterar resultatet på ett passande sätt.
+            svar.innerHTML = 'Fakulteten av ' + input + '! är ' + summa;
+            break;
+            }
+        }
+        }
+
+
+        </script>
+        </h1>
+</body>
+</html>
